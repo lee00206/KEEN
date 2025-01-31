@@ -22,7 +22,7 @@ def get_Config():
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--task', type=str, default='inference', help='inference, test')
     parser.add_argument('--inference_file_path', type=str, default='data/test_file.csv')
-    parser.add_argument('--output_file_path', type=str, default='data/test_output.csv')
+    parser.add_argument('--output_file_path', type=str, default=None)
 
     # hardware parameters
     parser.add_argument('--num_workers', type=int, default=8)
