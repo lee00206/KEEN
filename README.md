@@ -21,23 +21,24 @@ KEEN
 </code></pre>
 
 ### Requirements
-* numpy==1.22.4
-* requests==2.32.3
-* scikit-learn==1.5.0
-* scipy==1.13.1
-* tokenizers==0.19.1
-* torch==2.3.1
-* torchaudio==2.3.1
-* torchvision==0.18.1
-* tqdm==4.66.4
-* transformers==4.42.3
-* x-transformers==1.31.6
+* numpy==2.1.0
+* scikit-learn==1.5.1
+* torch==2.4.0
+* tqdm==4.66.5
+* transformers==4.44.2
 
 ### Run
-To inference the code, please use the following command:
+To run the code, you need a csv file with 'sequences' (Protein sequences, required), 'smiles' (SMILES strings of substances, required), and 'predictions' (True kcat values, optional) columns.<br>
+Please refer to the 'test_file.csv' provided to see the example format of the file.<br>
+
+To inference (without true labels) the code, please use the following command:
 <pre><code>
 python main.py --task inference
 </code></pre>
 
+To test (with true labels) the code and save the results, please use the following command:
+<pre><code>
+python main.py --task test --output_file_path {your output file path}
+</code></pre>
 
 
