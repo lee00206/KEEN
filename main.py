@@ -31,7 +31,7 @@ def main(args):
     tester = Tester(args, sequences, substrates)
     preds = tester.inference()
 
-    if args.save_output == True:
+    if args.output_file_path is not None:
         df['predictions'] = preds
         df.to_csv(f'{args.output_file_path}', index=False)
         print('Saved the output file!')
